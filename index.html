@@ -33,6 +33,72 @@ header.top,.top,.top .nav{
   right:auto!important;
   transform:none!important;
 }
+
+/* Unified header/logo styling across all pages */
+.nav{
+  width:min(1270px,calc(100% - 64px))!important;
+  margin:0 auto!important;
+  min-height:88px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:32px!important;
+  padding:0!important;
+}
+.brand{
+  display:inline-flex!important;
+  align-items:center!important;
+  flex:0 0 auto!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:0 0 6px!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+  position:relative!important;
+  transition:transform .18s ease!important;
+}
+.brand img{
+  display:block!important;
+  width:220px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  transition:transform .18s ease,filter .18s ease!important;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.10))!important;
+}
+.brand:after{
+  content:''!important;
+  position:absolute!important;
+  left:10%!important;
+  bottom:0!important;
+  width:80%!important;
+  height:2px!important;
+  border-radius:999px!important;
+  background:rgba(177,138,32,.35)!important;
+  transition:left .18s ease,width .18s ease,background .18s ease!important;
+}
+.brand:hover img{
+  transform:translateY(-2px) scale(1.03)!important;
+  filter:drop-shadow(0 6px 14px rgba(0,0,0,.16))!important;
+}
+.brand:hover:after{
+  left:0!important;
+  width:100%!important;
+  background:rgba(177,138,32,.8)!important;
+}
+.brand:active img{
+  transform:translateY(0) scale(.99)!important;
+}
+@media(max-width:700px){
+  .nav{
+    width:calc(100% - 32px)!important;
+    min-height:auto!important;
+    padding:16px 0!important;
+  }
+  .brand img{
+    width:190px!important;
+  }
+}
 </style>
 </head>
 <body>
